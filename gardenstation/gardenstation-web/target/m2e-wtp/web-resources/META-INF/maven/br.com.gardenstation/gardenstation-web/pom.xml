@@ -14,13 +14,14 @@
 	<name>gardenstation-web</name>
 
 	<build>
-<!-- 		<sourceDirectory>src</sourceDirectory> -->
+<!-- 		<sourceDirectory>src/main/resources</sourceDirectory> -->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
 				<filtering>false</filtering>
 			</resource>
 		</resources>
+
 		<plugins>
 			<plugin>
 				<artifactId>maven-war-plugin</artifactId>
