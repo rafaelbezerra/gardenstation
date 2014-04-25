@@ -1,0 +1,122 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>br.com.gardenstation</groupId>
+	<artifactId>gardenstation</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>pom</packaging>
+
+	<name>gardenstation</name>
+
+	<modules>
+		<module>gardenstation-core</module>
+		<module>gardenstation-web</module>
+		<module>gardenstation-liquibase</module>
+	</modules>
+	
+	<properties>
+		<gardenstation-core.version>1.0</gardenstation-core.version>
+		<javassist.version>3.12.1.GA</javassist.version>
+		<mysql.connector.java.version>5.1.29</mysql.connector.java.version>
+		<hsqldb.version>2.2.9</hsqldb.version>
+		<junit.version>4.11</junit.version>
+		<spark.core.version>1.1.1</spark.core.version>
+		<hibernate.version>4.3.4.Final</hibernate.version>
+		<spring.version>4.0.3.RELEASE</spring.version>
+	</properties>
+	
+	<dependencyManagement>
+		<dependencies>
+		
+			<!-- Depencias internas	 -->
+			<dependency>
+				<groupId>br.com.gardenstation</groupId>
+				<artifactId>gardenstation-core</artifactId>
+				<version>${gardenstation-core.version}</version>
+				<scope>compile</scope>
+			</dependency>
+			
+			<!-- Dependencias gerais -->
+			<dependency>
+				<groupId>javassist</groupId>
+				<artifactId>javassist</artifactId>
+				<version>${javassist.version}</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>mysql</groupId>
+				<artifactId>mysql-connector-java</artifactId>
+				<version>${mysql.connector.java.version}</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>hsqldb</groupId>
+				<artifactId>hsqldb</artifactId>
+				<version>${hsqldb.version}</version>
+			</dependency>
+	
+			<dependency>
+				<groupId>junit</groupId>
+				<artifactId>junit</artifactId>
+				<version>${junit.version}</version>
+				<scope>test</scope>
+			</dependency>
+	
+			<dependency>
+				<groupId>com.sparkjava</groupId>
+				<artifactId>spark-core</artifactId>
+				<version>${spark.core.version}</version>
+			</dependency>
+			
+			<!-- Dependencias do Hibernate -->
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-core</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.hibernate</groupId>
+				<artifactId>hibernate-entitymanager</artifactId>
+				<version>${hibernate.version}</version>
+			</dependency>
+			
+			<!-- Dependencias Spring -->
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-web</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-webmvc</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-test</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-tx</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-orm</artifactId>
+				<version>${spring.version}</version>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+</project>

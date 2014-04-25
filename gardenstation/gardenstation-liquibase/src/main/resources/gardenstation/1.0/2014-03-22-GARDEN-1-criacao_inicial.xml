@@ -1,0 +1,47 @@
+<databaseChangeLog
+	xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+    http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+	<changeSet id="1" author="rafael.bezerra">
+		<comment>Criando tabelas iniciais, umidade, temperatura, luminosidade e medicoes</comment>
+		<createTable tableName="umidade">
+			<column name="umi_id" type="java.sql.Types.INTEGER" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="umi_id_pk" nullable="false" />
+			</column>
+			<column name="umi_terra" type="java.sql.Types.DOUBLE" />
+			<column name="umi_ar" type="java.sql.Types.DOUBLE" />
+		</createTable>
+		<createTable tableName="temperatura">
+			<column name="temp_id" type="java.sql.Types.INTEGER" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="temp_id_pk" nullable="false" />
+			</column>
+			<column name="temp_terra" type="java.sql.Types.DOUBLE" />
+			<column name="temp_ar" type="java.sql.Types.DOUBLE" />
+		</createTable>
+		<createTable tableName="luminosidade">
+			<column name="lumi_id" type="java.sql.Types.INTEGER" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="lumi_id_pk" nullable="false" />
+			</column>
+			<column name="lumi_1" type="java.sql.Types.INTEGER" />
+			<column name="lumi_2" type="java.sql.Types.INTEGER" />
+			<column name="lumi_3" type="java.sql.Types.INTEGER" />
+			<column name="lumi_4" type="java.sql.Types.INTEGER" />
+		</createTable>
+		<createTable tableName="medicoes">
+			<column name="med_id" type="java.sql.Types.INTEGER" autoIncrement="true">
+				<constraints primaryKey="true" primaryKeyName="med_id_pk" nullable="false" />
+			</column>
+			<column name="umi_id" type="java.sql.Types.INTEGER">
+				<constraints foreignKeyName="umi_id_fk" references="umidade(umi_id)" nullable="false" />
+			</column>
+			<column name="temp_id" type="java.sql.Types.INTEGER">
+				<constraints foreignKeyName="temp_id_fk" references="temperatura(temp_id)" nullable="false" />
+			</column>
+			<column name="lumi_id" type="java.sql.Types.INTEGER">
+				<constraints foreignKeyName="lumi_id_fk" references="luminosidade(lumi_id)" nullable="false" />
+			</column>
+		</createTable>
+	</changeSet>
+</databaseChangeLog>
