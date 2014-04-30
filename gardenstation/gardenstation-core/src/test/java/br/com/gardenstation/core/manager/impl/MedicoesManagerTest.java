@@ -23,7 +23,7 @@ import br.com.gardenstation.core.manager.UmidadeManager;
 @Component
 @Transactional
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(value = "classpath:/spring-config.xml")
+@ContextConfiguration(value = "classpath:/META-INF/spring-test/spring-config.xml")
 public class MedicoesManagerTest {
 	
 	@Autowired

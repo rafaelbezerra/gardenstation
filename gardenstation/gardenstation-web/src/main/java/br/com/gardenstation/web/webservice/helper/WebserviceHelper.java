@@ -2,7 +2,6 @@ package br.com.gardenstation.web.webservice.helper;
 
 import java.util.Date;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 import spark.Request;
@@ -14,20 +13,17 @@ import br.com.gardenstation.core.manager.LuminosidadeManager;
 import br.com.gardenstation.core.manager.MedicoesManager;
 import br.com.gardenstation.core.manager.TemperaturaManager;
 import br.com.gardenstation.core.manager.UmidadeManager;
+import br.com.gardenstation.core.manager.impl.LuminosidadeManagerImpl;
+import br.com.gardenstation.core.manager.impl.MedicoesManagerImpl;
+import br.com.gardenstation.core.manager.impl.TemperaturaManagerImpl;
+import br.com.gardenstation.core.manager.impl.UmidadeManagerImpl;
 
 @Component
 public class WebserviceHelper {
 	
-	@Autowired
 	private UmidadeManager umidadeManager;
-	
-	@Autowired
 	private TemperaturaManager temperaturaManager;
-	
-	@Autowired
 	private LuminosidadeManager luminosidadeManager;
-	
-	@Autowired
 	private MedicoesManager medicoesManager;
 	
 	
@@ -36,6 +32,13 @@ public class WebserviceHelper {
 	
 	public static final String HTML_BREAKLINE = "<br/>";
 	public static final String CONSOLE_BREAKLINE = "\n";
+	
+	public WebserviceHelper(){
+		this.umidadeManager = new UmidadeManagerImpl();
+		this.temperaturaManager = new TemperaturaManagerImpl();
+		this.luminosidadeManager = new LuminosidadeManagerImpl();
+		this.medicoesManager = new MedicoesManagerImpl();
+	}
 	
 	public void defineRequest(Request request){
 		this.request = request;

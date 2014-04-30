@@ -3,6 +3,7 @@
 	<name>gardenstation-web</name>
 	<comment></comment>
 	<projects>
+		<project>gardenstation-core</project>
 	</projects>
 	<buildSpec>
 		<buildCommand>

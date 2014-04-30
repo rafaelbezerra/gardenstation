@@ -10,32 +10,6 @@
   	
   	<artifactId>gardenstation-liquibase</artifactId>
   	<packaging>jar</packaging>
-  	<version>1.0</version>
+  	<version>1.5</version>
   	<name>gardenstation-liquibase</name>
-  	
-    <build>
-        <plugins>
-            <plugin>
-                <groupId>org.liquibase</groupId>
-                <artifactId>liquibase-maven-plugin</artifactId>
-                <version>3.1.1</version>
-                <configuration>
-                    <changeLogFile>db-changelog-master.xml</changeLogFile>
-                    <driver>com.mysql.jdbc.Driver</driver>
-                    <url>jdbc:mysql://localhost:3306/gardenstation</url>
-                    <username>root</username>
-                    <password>123456</password>
-                    <promptOnNonLocalDatabase>false</promptOnNonLocalDatabase>
-                    <verbose>true</verbose>
-                </configuration>
-                <dependencies>
-                    <dependency>
-                        <groupId>mysql</groupId>
-                        <artifactId>mysql-connector-java</artifactId>
-                        <version>5.1.29</version>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        </plugins>
-    </build>
 </project>

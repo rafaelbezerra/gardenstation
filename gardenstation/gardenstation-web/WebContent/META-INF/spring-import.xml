@@ -9,6 +9,10 @@
            http://www.springframework.org/schema/context/spring-context-4.0.xsd
            http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx.xsd">
 		
-	<import resource="classpath:/src/main/resources/spring-config.xml"/>
+	<context:annotation-config />
+	
+	<context:component-scan base-package="br.com.gardenstation.web" />
+		
+	<import resource="classpath*:/META-INF/spring/*.xml"/>
 	
 </beans>

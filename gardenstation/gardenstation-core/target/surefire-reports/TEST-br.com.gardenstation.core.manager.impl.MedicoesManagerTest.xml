@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite failures="0" time="3.2" errors="0" skipped="0" tests="4" name="br.com.gardenstation.core.manager.impl.MedicoesManagerTest">
+<testsuite failures="0" time="3.26" errors="0" skipped="0" tests="4" name="br.com.gardenstation.core.manager.impl.MedicoesManagerTest">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk1.7.0_51\jre\bin"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="sun.os.patch.level" value="Service Pack 1"/>
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
-    <property name="user.dir" value="C:\Users\Bezerra\workspace\gardenstation"/>
+    <property name="user.dir" value="C:\Users\Bezerra\workspace\gardenstation\gardenstation"/>
     <property name="java.runtime.version" value="1.7.0_51-b13"/>
     <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
     <property name="java.endorsed.dirs" value="C:\Program Files\Java\jdk1.7.0_51\jre\lib\endorsed"/>
@@ -63,8 +63,8 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value=""/>
   </properties>
-  <testcase time="3.154" classname="br.com.gardenstation.core.manager.impl.MedicoesManagerTest" name="testaSave"/>
+  <testcase time="3.211" classname="br.com.gardenstation.core.manager.impl.MedicoesManagerTest" name="testaSave"/>
   <testcase time="0.024" classname="br.com.gardenstation.core.manager.impl.MedicoesManagerTest" name="testaFindById"/>
   <testcase time="0.011" classname="br.com.gardenstation.core.manager.impl.MedicoesManagerTest" name="testaRemove"/>
-  <testcase time="0.011" classname="br.com.gardenstation.core.manager.impl.MedicoesManagerTest" name="testaMerge"/>
+  <testcase time="0.014" classname="br.com.gardenstation.core.manager.impl.MedicoesManagerTest" name="testaMerge"/>
 </testsuite>
